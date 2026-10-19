@@ -1,11 +1,14 @@
 // Offline support when the app is served over https (phone install).
 // Everything lives in index.html plus the script sheet PDF.
 // Bump VERSION on every release so phones pick up the new build.
-const VERSION = 'grimoire-de318c929a';
+const VERSION = 'grimoire-e4f0461836';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg', './trouble-brewing.pdf'];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(VERSION).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
+  // cache: 'reload' skips the browser's HTTP cache, so a new version never
+  // stores an old copy of a file under its new name.
+  const fresh = FILES.map((f) => new Request(f, { cache: 'reload' }));
+  e.waitUntil(caches.open(VERSION).then((c) => c.addAll(fresh)).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {
