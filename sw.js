@@ -1,7 +1,7 @@
 // Offline support when the app is served over https (phone install).
 // Everything lives in index.html, so caching four files is the whole app.
 // Bump VERSION on every release so phones pick up the new build.
-const VERSION = 'grimoire-8699a4d13d';
+const VERSION = 'grimoire-5c4441c80c';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', (e) => {
