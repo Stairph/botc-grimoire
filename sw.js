@@ -1,8 +1,8 @@
 // Offline support when the app is served over https (phone install).
 // Everything lives in index.html plus the script sheet PDF.
 // Bump VERSION on every release so phones pick up the new build.
-const VERSION = 'grimoire-5b5b4b8027';
-const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg', './trouble-brewing.pdf'];
+const VERSION = 'grimoire-8ec0988c38';
+const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg', './apple-touch-icon.png', './trouble-brewing.pdf'];
 
 self.addEventListener('install', (e) => {
   // cache: 'reload' skips the browser's HTTP cache, so a new version never
