@@ -1,7 +1,7 @@
 // Offline support when the app is served over https (phone install).
 // Everything lives in index.html plus the script sheet PDF.
 // Bump VERSION on every release so phones pick up the new build.
-const VERSION = 'grimoire-cff7c8b3e6';
+const VERSION = 'grimoire-5b5b4b8027';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg', './trouble-brewing.pdf'];
 
 self.addEventListener('install', (e) => {
