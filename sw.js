@@ -1,8 +1,8 @@
 // Offline support when the app is served over https (phone install).
-// Everything lives in index.html, so caching four files is the whole app.
+// Everything lives in index.html plus the script sheet PDF.
 // Bump VERSION on every release so phones pick up the new build.
-const VERSION = 'grimoire-5c4441c80c';
-const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
+const VERSION = 'grimoire-4136706250';
+const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg', './trouble-brewing.pdf'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
