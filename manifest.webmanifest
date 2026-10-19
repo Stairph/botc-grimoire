@@ -1,0 +1,12 @@
+{
+  "name": "Grimoire",
+  "short_name": "Grimoire",
+  "description": "Game master assistant for Blood on the Clocktower",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#15121c",
+  "theme_color": "#15121c",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
